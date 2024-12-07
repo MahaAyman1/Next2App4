@@ -1,0 +1,49 @@
+﻿@model Employee
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+<table class="table table-bordered" >
+    <tr> 
+        <td><label asp-for="EmployeeID"> </label> 
+            <td> @Model.EmployeeID</td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td><label asp-for="Name"> </label>
+        <td> @Model.Name</td>
+
+        </td>
+    </tr>
+    <tr>
+        <td><label asp-for="Email"> </label>
+        <td> @Model.Email</td>
+
+        </td>
+    </tr>
+    <tr>
+        <td><label asp-for="salary"> </label>
+        <td> @Model.salary</td>
+
+        </td>
+    </tr>
+    <tr>
+        <td><label asp-for="HDate"> </label>
+        <td> @Model.HDate.ToShortDateString()</td>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td><label asp-for="city"> </label> </td>
+        <td> @Model.city</td>
+
+       
+    </tr>
+</table>
+
+<a  asp-action= "Index" > back </a>
